@@ -4,6 +4,7 @@ using SabberStoneCore.Enums;
 using SabberStoneCoreAi.POGame;
 using SabberStoneCoreAi.Agent.ExampleAgents;
 using SabberStoneCoreAi.Agent;
+using SabberStoneCoreAi.src.Agent;
 
 namespace SabberStoneCoreAi
 {
@@ -26,8 +27,8 @@ namespace SabberStoneCoreAi
 			};
 
 			Console.WriteLine("Setup POGameHandler");
-			AbstractAgent player1 = new FaceHunter();
-			AbstractAgent player2 = new FaceHunter();
+			AbstractAgent player1 = new MyAgent();
+			AbstractAgent player2 = new RandomAgent();
 			var gameHandler = new POGameHandler(gameConfig, player1, player2, debug:true);
 
 			Console.WriteLine("PlayGame");
